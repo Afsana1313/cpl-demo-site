@@ -1,0 +1,27 @@
+.layout-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.header-content-wrapper {
+  width: 100%;
+}
+.top-header {
+  width: 100%;
+  background-color: black;
+  padding: 10px 0;
+}
+.bottom-header {
+  width: 100%;
+  background-color: antiquewhite;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-wrapper ul {
+}
+.navbar-wrapper ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+}
