@@ -76,6 +76,12 @@ function LoginCard({ setLoginCard }) {
             type="button"
             value="Login"
           />
+
+          <span
+            style={{ color: "red", visibility: message ? "visible" : "hidden" }}
+          >
+            Incorrect UserId or Password
+          </span>
         </form>
         <a href="#!" className="forgot-password-link">
           Forgot password?

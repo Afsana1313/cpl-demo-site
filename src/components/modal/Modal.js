@@ -3,9 +3,11 @@ import LoginCardleft from "./LoginCardleft";
 import CardRight from "./CardRight";
 function Modal() {
   return (
-    <div className="login-card-wrapper">
-      <LoginCardleft />
-      <CardRight />
+    <div className="modal-container">
+      <div className="login-card-wrapper">
+        <LoginCardleft />
+        <CardRight />
+      </div>
     </div>
   );
 }

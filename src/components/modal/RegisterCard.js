@@ -18,6 +18,7 @@ function RegisterCard({ setLoginCard }) {
   const handleSubmit = async () => {
     const response = await RegisterNewUser(email, pw);
     if (response) {
+      // let reportingMessage = checkIfUserExists(email, phone, userId)
       dispatch(register(email, phone, pw, userId));
       setShow(true);
       setMessage("Access Granted");
@@ -95,6 +96,11 @@ function RegisterCard({ setLoginCard }) {
             type="button"
             value="Login"
           />
+          <span
+            style={{ color: "red", visibility: message ? "visible" : "hidden" }}
+          >
+            User Exists
+          </span>
         </form>
         <a href="#!" className="forgot-password-link">
           Forgot password?

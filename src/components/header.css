@@ -1,6 +1,12 @@
 .layout-wrapper {
-  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-content-wrapper {
   width: 100%;
@@ -11,7 +17,8 @@
   padding: 10px 0;
 }
 .bottom-header {
-  width: 100%;
+  margin: 0 auto;
+  width: 1024px;
   background-color: antiquewhite;
   padding: 40px;
   display: flex;

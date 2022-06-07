@@ -16,12 +16,13 @@ function Layout({ children }) {
   };
   const handleLogOut = () => {
     dispatch(logout());
+    dispatch(openLoginModal());
     navigate("/");
   };
   return (
     <div className="layout-wrapper">
       <div className="header-content-wrapper">
-        <div className="top-header"></div>
+        {/* <div className="top-header"></div> */}
         <div className="bottom-header">
           <div className="logo-wrapper">logo</div>
           <div className="navbar-wrapper">
@@ -42,8 +43,8 @@ function Layout({ children }) {
             </nav>
           </div>
         </div>
-        <main> {children}</main>
       </div>
+      <main> {children}</main>
     </div>
   );
 }
