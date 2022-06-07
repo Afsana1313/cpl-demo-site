@@ -14,10 +14,11 @@ function RegisterCard({ setLoginCard }) {
   const [pw, setPW] = useState("");
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState();
+  const [userId, setUserId] = useState("");
   const handleSubmit = async () => {
     const response = await RegisterNewUser(email, pw);
     if (response) {
-      dispatch(register(email, phone, pw));
+      dispatch(register(email, phone, pw, userId));
       setShow(true);
       setMessage("Access Granted");
       setTimeout(() => {
@@ -53,6 +54,13 @@ function RegisterCard({ setLoginCard }) {
             className="form-control"
             placeholder="Email address"
             onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="text"
+            name="userId"
+            className="form-control"
+            placeholder="User ID"
+            onChange={(e) => setUserId(e.target.value)}
           />
           <input
             type="tel"
